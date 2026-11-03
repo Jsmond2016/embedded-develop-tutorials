@@ -39,14 +39,14 @@ export default withMermaid(
           text: '课程内容',
           items: [
             { text: '课程总览', link: '/modules/' },
-            { text: '第 0 部分 · 转型认知', link: '/modules/#part-0' },
-            { text: '第 1 部分 · C 与底层思维', link: '/modules/#part-1' },
-            { text: '第 2 部分 · MCU 与外设', link: '/modules/#part-2' },
-            { text: '第 3 部分 · FreeRTOS', link: '/modules/#part-3' },
-            { text: '第 4 部分 · 通信协议与 IoT', link: '/modules/#part-4' },
-            { text: '第 5 部分 · 嵌入式 Linux', link: '/modules/#part-5' },
-            { text: '第 6 部分 · 工程化与量产', link: '/modules/#part-6' },
-            { text: '第 7 部分 · 求职与面试', link: '/modules/#part-7' }
+            { text: '第 0 部分 · 转型认知', link: '/modules/00-orientation/01-role-map' },
+            { text: '第 1 部分 · C 与底层思维', link: '/modules/01-c-foundation/01-compile-model' },
+            { text: '第 2 部分 · MCU 与外设', link: '/modules/02-mcu/01-electricity' },
+            { text: '第 3 部分 · FreeRTOS', link: '/modules/03-rtos/01-why-rtos' },
+            { text: '第 4 部分 · 通信协议与 IoT', link: '/modules/04-iot/01-serial-vs-network' },
+            { text: '第 5 部分 · 嵌入式 Linux', link: '/modules/05-linux/01-mcu-vs-linux' },
+            { text: '第 6 部分 · 工程化与量产', link: '/modules/06-engineering/01-requirements-architecture' },
+            { text: '第 7 部分 · 求职与面试', link: '/modules/07-career/01-resume' }
           ]
         },
         { text: '项目实战', link: '/projects/' },
@@ -76,14 +76,14 @@ export default withMermaid(
             text: '课程内容',
             items: [
               { text: '课程总览', link: '/modules/' },
-              { text: '第 0 部分 · 转型认知', link: '/modules/#part-0' },
-              { text: '第 1 部分 · C 与底层思维', link: '/modules/#part-1' },
-              { text: '第 2 部分 · MCU 与外设', link: '/modules/#part-2' },
-              { text: '第 3 部分 · FreeRTOS', link: '/modules/#part-3' },
-              { text: '第 4 部分 · 通信协议与 IoT', link: '/modules/#part-4' },
-              { text: '第 5 部分 · 嵌入式 Linux', link: '/modules/#part-5' },
-              { text: '第 6 部分 · 工程化与量产', link: '/modules/#part-6' },
-              { text: '第 7 部分 · 求职与面试', link: '/modules/#part-7' }
+              { text: '第 0 部分 · 转型认知', link: '/modules/00-orientation/01-role-map' },
+              { text: '第 1 部分 · C 与底层思维', link: '/modules/01-c-foundation/01-compile-model' },
+              { text: '第 2 部分 · MCU 与外设', link: '/modules/02-mcu/01-electricity' },
+              { text: '第 3 部分 · FreeRTOS', link: '/modules/03-rtos/01-why-rtos' },
+              { text: '第 4 部分 · 通信协议与 IoT', link: '/modules/04-iot/01-serial-vs-network' },
+              { text: '第 5 部分 · 嵌入式 Linux', link: '/modules/05-linux/01-mcu-vs-linux' },
+              { text: '第 6 部分 · 工程化与量产', link: '/modules/06-engineering/01-requirements-architecture' },
+              { text: '第 7 部分 · 求职与面试', link: '/modules/07-career/01-resume' }
             ]
           }
         ],

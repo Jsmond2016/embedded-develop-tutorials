@@ -56,14 +56,14 @@ features:
 
 | 部分 | 周期 | 阶段产出 |
 | --- | ---: | --- |
-| [第 0 部分 · 转型认知](/modules/#part-0) | 1 周 | 点灯、串口输出、GDB 调试 |
-| [第 1 部分 · C 与底层思维](/modules/#part-1) | 4 周 | 主机端 C 工具库 |
-| [第 2 部分 · MCU 与外设](/modules/#part-2) | 5 周 | 裸机环境监测节点 |
-| [第 3 部分 · FreeRTOS](/modules/#part-3) | 4 周 | 多任务监测仪 |
-| [第 4 部分 · 通信协议与 IoT](/modules/#part-4) | 3 周 | MCU + 网关 + Web 仪表盘 |
-| [第 5 部分 · 嵌入式 Linux](/modules/#part-5) | 3 周 | Linux 边缘网关服务 |
-| [第 6 部分 · 工程化与量产](/modules/#part-6) | 2 周 | 可交付的产品原型 |
-| [第 7 部分 · 求职与面试](/modules/#part-7) | 1 周 | 简历、作品集与面试准备 |
+| [第 0 部分 · 转型认知](/modules/00-orientation/01-role-map) | 1 周 | 点灯、串口输出、GDB 调试 |
+| [第 1 部分 · C 与底层思维](/modules/01-c-foundation/01-compile-model) | 4 周 | 主机端 C 工具库 |
+| [第 2 部分 · MCU 与外设](/modules/02-mcu/01-electricity) | 5 周 | 裸机环境监测节点 |
+| [第 3 部分 · FreeRTOS](/modules/03-rtos/01-why-rtos) | 4 周 | 多任务监测仪 |
+| [第 4 部分 · 通信协议与 IoT](/modules/04-iot/01-serial-vs-network) | 3 周 | MCU + 网关 + Web 仪表盘 |
+| [第 5 部分 · 嵌入式 Linux](/modules/05-linux/01-mcu-vs-linux) | 3 周 | Linux 边缘网关服务 |
+| [第 6 部分 · 工程化与量产](/modules/06-engineering/01-requirements-architecture) | 2 周 | 可交付的产品原型 |
+| [第 7 部分 · 求职与面试](/modules/07-career/01-resume) | 1 周 | 简历、作品集与面试准备 |
 
 ## 推荐硬件
 
