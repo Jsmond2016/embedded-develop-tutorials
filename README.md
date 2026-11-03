@@ -1,5 +1,7 @@
 # 从 Web 到硬件：前端工程师的嵌入式转型实战
 
+GitHub 仓库：[Jsmond2016/embedded-develop-tutorials](https://github.com/Jsmond2016/embedded-develop-tutorials)
+
 一份面向前端工程师的嵌入式开发教程，使用 VitePress 构建，配套完整课程大纲、模块教程、项目实战、排障手册和面试题库。
 
 ## 课程定位

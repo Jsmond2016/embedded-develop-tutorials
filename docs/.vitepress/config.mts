@@ -66,6 +66,13 @@ export default withMermaid(
           ]
         }
       ],
+      socialLinks: [
+        {
+          icon: 'github',
+          link: 'https://github.com/Jsmond2016/embedded-develop-tutorials',
+          ariaLabel: 'GitHub 仓库'
+        }
+      ],
       sidebar: {
         '/guide/': [
           {
