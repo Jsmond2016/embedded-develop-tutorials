@@ -43,7 +43,7 @@ const void *vector_table[] = {
 
 ## 链接脚本的关键部分
 
-```ld
+```text
 ENTRY(Reset_Handler)
 
 MEMORY
@@ -159,4 +159,3 @@ arm-none-eabi-objdump -h firmware.elf
 - [ ] 知道 `.data` 复制和 `.bss` 清零的时机。
 - [ ] 能检查 Map 文件中的 Flash/SRAM 占用。
 - [ ] 知道 Bootloader 场景下要设置向量表偏移。
-

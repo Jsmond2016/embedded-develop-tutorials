@@ -145,7 +145,7 @@ module_platform_driver(my_driver);
 
 设备树中对应节点：
 
-```dts
+```text
 mydev@40000000 {
     compatible = "vendor,mydev";
     reg = <0x40000000 0x1000>;
@@ -184,4 +184,3 @@ mydev@40000000 {
 - [ ] 能实现最小字符设备。
 - [ ] 能通过设备树匹配 platform driver。
 - [ ] 所有用户数据复制和并发访问都有保护。
-

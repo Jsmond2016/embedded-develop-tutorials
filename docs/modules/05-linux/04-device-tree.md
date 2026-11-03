@@ -19,7 +19,7 @@ SoC dtsi + board dts + overlay -> DTB -> Kernel
 
 ## 一个 I2C 传感器节点
 
-```dts
+```text
 &i2c1 {
     status = "okay";
     clock-frequency = <100000>;
@@ -40,7 +40,7 @@ SoC dtsi + board dts + overlay -> DTB -> Kernel
 
 ## GPIO 节点
 
-```dts
+```text
 leds {
     compatible = "gpio-leds";
 
@@ -58,7 +58,7 @@ leds {
 
 不必修改基础 DTB，可以加载 overlay 增加节点：
 
-```dts
+```text
 /dts-v1/;
 /plugin/;
 
@@ -127,4 +127,3 @@ C 代码使用 `ioctl(I2C_RDWR)` 或 `smbus` 接口。用户空间驱动适合�
 - [ ] 能修改并加载 overlay。
 - [ ] 会用 libgpiod 和 i2c-tools。
 - [ ] 知道用户空间驱动与内核驱动的适用边界。
-
