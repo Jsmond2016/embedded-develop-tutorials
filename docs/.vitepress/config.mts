@@ -27,10 +27,40 @@ export default withMermaid(
     },
     themeConfig: {
       nav: [
-        { text: '学习路线', link: '/guide/roadmap' },
-        { text: '课程大纲', link: '/guide/outline' },
+        {
+          text: '学习路线',
+          items: [
+            { text: '学习路线', link: '/guide/roadmap' },
+            { text: '完整大纲', link: '/guide/outline' },
+            { text: '学习方法', link: '/guide/study-method' }
+          ]
+        },
+        {
+          text: '课程内容',
+          items: [
+            { text: '课程总览', link: '/modules/' },
+            { text: '第 0 部分 · 转型认知', link: '/modules/#part-0' },
+            { text: '第 1 部分 · C 与底层思维', link: '/modules/#part-1' },
+            { text: '第 2 部分 · MCU 与外设', link: '/modules/#part-2' },
+            { text: '第 3 部分 · FreeRTOS', link: '/modules/#part-3' },
+            { text: '第 4 部分 · 通信协议与 IoT', link: '/modules/#part-4' },
+            { text: '第 5 部分 · 嵌入式 Linux', link: '/modules/#part-5' },
+            { text: '第 6 部分 · 工程化与量产', link: '/modules/#part-6' },
+            { text: '第 7 部分 · 求职与面试', link: '/modules/#part-7' }
+          ]
+        },
         { text: '项目实战', link: '/projects/' },
-        { text: '面试题库', link: '/appendix/interview' }
+        { text: '面试题库', link: '/appendix/interview' },
+        {
+          text: '附录',
+          items: [
+            { text: '工具链速查', link: '/appendix/toolchain' },
+            { text: '硬件清单', link: '/appendix/hardware' },
+            { text: '排障手册', link: '/appendix/troubleshooting' },
+            { text: '术语表', link: '/appendix/glossary' },
+            { text: '参考资料', link: '/appendix/references' }
+          ]
+        }
       ],
       sidebar: {
         '/guide/': [
@@ -41,9 +71,31 @@ export default withMermaid(
               { text: '完整大纲', link: '/guide/outline' },
               { text: '学习方法', link: '/guide/study-method' }
             ]
+          },
+          {
+            text: '课程内容',
+            items: [
+              { text: '课程总览', link: '/modules/' },
+              { text: '第 0 部分 · 转型认知', link: '/modules/#part-0' },
+              { text: '第 1 部分 · C 与底层思维', link: '/modules/#part-1' },
+              { text: '第 2 部分 · MCU 与外设', link: '/modules/#part-2' },
+              { text: '第 3 部分 · FreeRTOS', link: '/modules/#part-3' },
+              { text: '第 4 部分 · 通信协议与 IoT', link: '/modules/#part-4' },
+              { text: '第 5 部分 · 嵌入式 Linux', link: '/modules/#part-5' },
+              { text: '第 6 部分 · 工程化与量产', link: '/modules/#part-6' },
+              { text: '第 7 部分 · 求职与面试', link: '/modules/#part-7' }
+            ]
           }
         ],
         '/modules/': [
+          {
+            text: '课程导航',
+            items: [
+              { text: '课程总览', link: '/modules/' },
+              { text: '完整大纲', link: '/guide/outline' },
+              { text: '学习路线', link: '/guide/roadmap' }
+            ]
+          },
           {
             text: '第 0 部分 · 转型认知',
             collapsed: false,

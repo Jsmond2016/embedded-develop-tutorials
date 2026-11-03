@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: 开始学习
-      link: /guide/roadmap
+      link: /modules/
     - theme: alt
       text: 查看完整大纲
       link: /guide/outline
@@ -49,6 +49,21 @@ features:
 | 求职与面试 | 1 周 | 简历、作品集与面试题库 |
 
 > 建议每周投入 12–15 小时，动手时间不少于 60%。完整路线约 20–24 周；如果只冲 MCU 固件岗位，可压缩到 18 周左右。
+
+## 课程内容
+
+[课程总览](/modules/) 按 8 个部分列出全部 68 节，可直接进入任意章节；也可以从对应部分的入口开始：
+
+| 部分 | 周期 | 阶段产出 |
+| --- | ---: | --- |
+| [第 0 部分 · 转型认知](/modules/#part-0) | 1 周 | 点灯、串口输出、GDB 调试 |
+| [第 1 部分 · C 与底层思维](/modules/#part-1) | 4 周 | 主机端 C 工具库 |
+| [第 2 部分 · MCU 与外设](/modules/#part-2) | 5 周 | 裸机环境监测节点 |
+| [第 3 部分 · FreeRTOS](/modules/#part-3) | 4 周 | 多任务监测仪 |
+| [第 4 部分 · 通信协议与 IoT](/modules/#part-4) | 3 周 | MCU + 网关 + Web 仪表盘 |
+| [第 5 部分 · 嵌入式 Linux](/modules/#part-5) | 3 周 | Linux 边缘网关服务 |
+| [第 6 部分 · 工程化与量产](/modules/#part-6) | 2 周 | 可交付的产品原型 |
+| [第 7 部分 · 求职与面试](/modules/#part-7) | 1 周 | 简历、作品集与面试准备 |
 
 ## 推荐硬件
 
