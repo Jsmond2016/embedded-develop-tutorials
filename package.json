@@ -16,6 +16,7 @@
     "cytoscape-cose-bilkent": "^4.1.0",
     "dayjs": "^1.11.23",
     "debug": "^4.4.3",
+    "markdown-it-task-lists": "^2.1.1",
     "mermaid": "^11.4.1",
     "typescript": "^5.7.2",
     "vitepress": "^1.6.4",

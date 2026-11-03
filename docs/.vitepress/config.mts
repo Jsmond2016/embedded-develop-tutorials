@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import taskLists from 'markdown-it-task-lists'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
 export default withMermaid(
@@ -18,7 +19,10 @@ export default withMermaid(
     ],
     markdown: {
       lineNumbers: true,
-      theme: { light: 'github-light', dark: 'github-dark' }
+      theme: { light: 'github-light', dark: 'github-dark' },
+      config: (md) => {
+        md.use(taskLists)
+      }
     },
     vite: {
       optimizeDeps: {

@@ -34,3 +34,22 @@
   padding: 0.75rem 1rem;
 }
 
+
+.vp-doc .contains-task-list {
+  padding-left: 0.25rem;
+  list-style: none;
+}
+
+.vp-doc .task-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.vp-doc .task-list-item-checkbox {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin-top: 0.3rem;
+  accent-color: var(--vp-c-brand-1);
+}
