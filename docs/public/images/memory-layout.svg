@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-label="Flash 与 SRAM 内存布局示意图">
+  <rect width="1200" height="620" rx="18" fill="#f8fafc"/>
+  <rect x="1" y="1" width="1198" height="618" rx="18" fill="none" stroke="#e2e8f0"/>
+  <defs>
+    <marker id="copyArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/>
+    </marker>
+  </defs>
+
+  <text x="56" y="56" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="28" font-weight="600" fill="#0f172a">Flash 与 SRAM 不是一回事</text>
+  <text x="56" y="86" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="16" fill="#64748b">链接脚本决定每个段放在哪里；启动代码负责搬运初值并清零 .bss</text>
+
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <rect x="70" y="120" width="470" height="46" rx="10" fill="#0f766e"/>
+    <text x="92" y="150" font-size="18" font-weight="600" fill="#ffffff">Flash</text>
+    <text x="518" y="150" text-anchor="end" font-size="15" font-family="Menlo,Consolas,monospace" fill="#ccfbf1">0x0800_0000</text>
+
+    <rect x="660" y="120" width="470" height="46" rx="10" fill="#334155"/>
+    <text x="682" y="150" font-size="18" font-weight="600" fill="#ffffff">SRAM</text>
+    <text x="1108" y="150" text-anchor="end" font-size="15" font-family="Menlo,Consolas,monospace" fill="#cbd5e1">0x2000_0000</text>
+
+    <rect x="70" y="166" width="470" height="58" fill="#e2e8f0"/>
+    <text x="92" y="193" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">.isr_vector</text>
+    <text x="518" y="193" text-anchor="end" font-size="13" fill="#64748b">向量表</text>
+
+    <rect x="70" y="224" width="470" height="84" fill="#e2e8f0"/>
+    <text x="92" y="258" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">.text</text>
+    <text x="92" y="282" font-size="14" fill="#475569">代码与字符串字面量</text>
+    <text x="518" y="282" text-anchor="end" font-size="13" fill="#64748b">只读</text>
+
+    <rect x="70" y="308" width="470" height="58" fill="#e2e8f0"/>
+    <text x="92" y="335" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">.rodata</text>
+    <text x="518" y="335" text-anchor="end" font-size="13" fill="#64748b">const 常量</text>
+
+    <rect x="70" y="366" width="470" height="66" fill="#ffedd5" stroke="#fdba74"/>
+    <text x="92" y="396" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">.data 初值</text>
+    <text x="92" y="418" font-size="13" fill="#9a3412">上电后复制到 SRAM</text>
+    <text x="518" y="410" text-anchor="end" font-size="13" fill="#9a3412">占 Flash</text>
+
+    <rect x="70" y="432" width="470" height="70" fill="none" stroke="#cbd5e1" stroke-dasharray="7 6"/>
+    <text x="92" y="472" font-size="15" fill="#94a3b8">剩余 Flash（可留给 OTA 备份 / 参数区）</text>
+
+    <rect x="660" y="166" width="470" height="66" fill="#ffedd5" stroke="#fdba74"/>
+    <text x="682" y="196" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">.data</text>
+    <text x="682" y="218" font-size="13" fill="#9a3412">已初始化的全局 / 静态变量</text>
+    <text x="1108" y="206" text-anchor="end" font-size="13" fill="#9a3412">读写</text>
+
+    <rect x="660" y="232" width="470" height="66" fill="#ccfbf1"/>
+    <text x="682" y="262" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">.bss</text>
+    <text x="682" y="284" font-size="13" fill="#0f766e">未初始化变量，启动时清零</text>
+    <text x="1108" y="272" text-anchor="end" font-size="13" fill="#0f766e">不占 Flash</text>
+
+    <rect x="660" y="298" width="470" height="90" fill="#f1f5f9"/>
+    <text x="682" y="336" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">heap ↓</text>
+    <text x="682" y="360" font-size="13" fill="#64748b">malloc 向上增长，注意碎片</text>
+    <text x="1108" y="346" text-anchor="end" font-size="13" fill="#64748b">动态</text>
+
+    <rect x="660" y="388" width="470" height="46" fill="none" stroke="#cbd5e1" stroke-dasharray="7 6"/>
+    <text x="682" y="417" font-size="14" fill="#94a3b8">剩余 SRAM</text>
+
+    <rect x="660" y="434" width="470" height="68" fill="#f1f5f9"/>
+    <text x="682" y="464" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">stack ↑</text>
+    <text x="682" y="486" font-size="13" fill="#64748b">向下增长，溢出通常先踩到堆</text>
+    <text x="1108" y="472" text-anchor="end" font-size="13" fill="#64748b">运行时</text>
+  </g>
+
+  <path d="M540 399 C592 399 604 199 652 199" fill="none" stroke="#ea580c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#copyArrow)"/>
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14">
+    <rect x="70" y="540" width="16" height="16" rx="3" fill="#ffedd5" stroke="#fdba74"/>
+    <text x="96" y="553" fill="#475569">已初始化数据（初值在 Flash）</text>
+    <rect x="320" y="540" width="16" height="16" rx="3" fill="#ccfbf1"/>
+    <text x="346" y="553" fill="#475569">零初始化（启动时清零）</text>
+    <rect x="560" y="540" width="16" height="16" rx="3" fill="#f1f5f9"/>
+    <text x="586" y="553" fill="#475569">栈 / 堆（运行时变化）</text>
+  </g>
+
+  <text x="70" y="594" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#64748b">发布前记录 .text + .data 的 Flash 占用，以及 .bss + stack + heap 的 SRAM 占用，给后续功能留余量。</text>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-label="嵌入式 Linux 启动链路与常见故障示意图">
+  <rect width="1200" height="620" rx="18" fill="#f8fafc"/>
+  <rect x="1" y="1" width="1198" height="618" rx="18" fill="none" stroke="#e2e8f0"/>
+  <defs>
+    <marker id="bootArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <text x="56" y="56" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="28" font-weight="600" fill="#0f172a">启动链：每一阶段都在搬运下一阶段</text>
+  <text x="56" y="86" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="16" fill="#64748b">从 SoC 上电到应用服务就绪；串口日志停在哪里，问题通常就在上一阶段</text>
+
+  <text x="70" y="110" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="13" fill="#94a3b8">启动阶段</text>
+  <text x="756" y="110" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="13" fill="#94a3b8">常见卡点</text>
+
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <rect x="70" y="118" width="620" height="54" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <circle cx="98" cy="145" r="15" fill="#0f766e"/>
+    <text x="98" y="150" text-anchor="middle" font-size="13" fill="#ffffff">1</text>
+    <text x="130" y="152" font-size="20" font-weight="600" fill="#0f172a">SoC BootROM</text>
+    <text x="668" y="152" text-anchor="end" font-size="13" font-family="Menlo,Consolas,monospace" fill="#64748b">芯片内部固化</text>
+
+    <rect x="70" y="186" width="620" height="54" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <circle cx="98" cy="213" r="15" fill="#0d9488"/>
+    <text x="98" y="218" text-anchor="middle" font-size="13" fill="#ffffff">2</text>
+    <text x="130" y="220" font-size="20" font-weight="600" fill="#0f172a">SPL</text>
+    <text x="668" y="220" text-anchor="end" font-size="13" font-family="Menlo,Consolas,monospace" fill="#64748b">SRAM，初始化 DRAM</text>
+
+    <rect x="70" y="254" width="620" height="54" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <circle cx="98" cy="281" r="15" fill="#14b8a6"/>
+    <text x="98" y="286" text-anchor="middle" font-size="13" fill="#ffffff">3</text>
+    <text x="130" y="288" font-size="20" font-weight="600" fill="#0f172a">U-Boot</text>
+    <text x="668" y="288" text-anchor="end" font-size="13" font-family="Menlo,Consolas,monospace" fill="#64748b">DRAM</text>
+
+    <rect x="70" y="322" width="620" height="54" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <circle cx="98" cy="349" r="15" fill="#0f766e"/>
+    <text x="98" y="354" text-anchor="middle" font-size="13" fill="#ffffff">4</text>
+    <text x="130" y="356" font-size="20" font-weight="600" fill="#0f172a">Kernel + DTB</text>
+    <text x="668" y="356" text-anchor="end" font-size="13" font-family="Menlo,Consolas,monospace" fill="#64748b">DRAM</text>
+
+    <rect x="70" y="390" width="620" height="54" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <circle cx="98" cy="417" r="15" fill="#0d9488"/>
+    <text x="98" y="422" text-anchor="middle" font-size="13" fill="#ffffff">5</text>
+    <text x="130" y="424" font-size="20" font-weight="600" fill="#0f172a">Rootfs</text>
+    <text x="668" y="424" text-anchor="end" font-size="13" font-family="Menlo,Consolas,monospace" fill="#64748b">eMMC / SD / NFS</text>
+
+    <rect x="70" y="458" width="620" height="54" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <circle cx="98" cy="485" r="15" fill="#14b8a6"/>
+    <text x="98" y="490" text-anchor="middle" font-size="13" fill="#ffffff">6</text>
+    <text x="130" y="492" font-size="20" font-weight="600" fill="#0f172a">init / systemd</text>
+    <text x="668" y="492" text-anchor="end" font-size="13" font-family="Menlo,Consolas,monospace" fill="#64748b">用户空间</text>
+
+    <rect x="70" y="526" width="620" height="54" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <circle cx="98" cy="553" r="15" fill="#0f766e"/>
+    <text x="98" y="558" text-anchor="middle" font-size="13" fill="#ffffff">7</text>
+    <text x="130" y="560" font-size="20" font-weight="600" fill="#0f172a">应用服务</text>
+    <text x="668" y="560" text-anchor="end" font-size="13" font-family="Menlo,Consolas,monospace" fill="#64748b">用户空间</text>
+  </g>
+
+  <path d="M98 172 V186" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#bootArrow)"/>
+  <path d="M98 240 V254" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#bootArrow)"/>
+  <path d="M98 308 V322" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#bootArrow)"/>
+  <path d="M98 376 V390" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#bootArrow)"/>
+  <path d="M98 444 V458" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#bootArrow)"/>
+  <path d="M98 512 V526" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#bootArrow)"/>
+
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="15" fill="#475569">
+    <circle cx="740" cy="145" r="4" fill="#ea580c"/>
+    <text x="756" y="150">无输出：供电、时钟、启动模式</text>
+    <circle cx="740" cy="213" r="4" fill="#ea580c"/>
+    <text x="756" y="218">卡住：DRAM 参数、介质读取</text>
+    <circle cx="740" cy="281" r="4" fill="#ea580c"/>
+    <text x="756" y="286">有命令行但 boot 失败：bootargs、镜像地址</text>
+    <circle cx="740" cy="349" r="4" fill="#ea580c"/>
+    <text x="756" y="354">无 console：DTB、串口、earlycon</text>
+    <circle cx="740" cy="417" r="4" fill="#ea580c"/>
+    <text x="756" y="422">Kernel panic：root= 或文件系统损坏</text>
+    <circle cx="740" cy="485" r="4" fill="#ea580c"/>
+    <text x="756" y="490">停在登录前：unit 依赖、只读根分区</text>
+    <circle cx="740" cy="553" r="4" fill="#ea580c"/>
+    <text x="756" y="558">反复重启：配置、权限、依赖</text>
+  </g>
+
+  <text x="70" y="606" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#64748b">调试建议：先保存完整串口日志，再按阶段确认“上一阶段是否真的成功交接”。</text>
+</svg>

@@ -25,6 +25,14 @@ flowchart LR
 | 汇编 | `gcc -c` | 把汇编转成目标文件 |
 | 链接 | `ld` / `gcc` | 合并段、解析符号、生成 ELF |
 
+## 链接产物：ELF 的结构
+
+链接器把多个 `.o` 中同名的段合并，解析未定义符号，并把引用重定位到最终地址。最终产物不是“一堆代码”，而是有明确段结构的 ELF 文件：
+
+![链接后 ELF 文件的结构：ELF Header、.isr_vector、.text、.rodata、.data 初值、.bss 与符号表](/images/elf-structure.svg)
+
+*图：`.bss` 标记为 NOBITS，运行时占 SRAM，但不占 Flash 文件空间。*
+
 ## 一个最小的多文件工程
 
 ```c

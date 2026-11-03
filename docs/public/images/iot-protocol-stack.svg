@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-label="嵌入式 IoT 协议分层与封装示意图">
+  <rect width="1200" height="620" rx="18" fill="#f8fafc"/>
+  <rect x="1" y="1" width="1198" height="618" rx="18" fill="none" stroke="#e2e8f0"/>
+
+  <text x="56" y="56" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="28" font-weight="600" fill="#0f172a">一条链路上，每一层只解决一件事</text>
+  <text x="56" y="86" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="16" fill="#64748b">上层依赖下层，但每层都有自己的帧头、校验、超时与重试</text>
+
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <rect x="70" y="140" width="480" height="64" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="70" y="140" width="7" height="64" rx="3.5" fill="#0f766e"/>
+    <text x="100" y="168" font-size="21" font-weight="600" fill="#0f172a">应用层 · MQTT / HTTP</text>
+    <text x="100" y="191" font-size="14" fill="#64748b">业务语义、QoS、重试与幂等</text>
+    <text x="526" y="176" text-anchor="end" font-size="13" font-family="Menlo,Consolas,monospace" fill="#94a3b8">L7</text>
+
+    <rect x="70" y="218" width="480" height="64" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="70" y="218" width="7" height="64" rx="3.5" fill="#0d9488"/>
+    <text x="100" y="246" font-size="21" font-weight="600" fill="#0f172a">安全层 · TLS</text>
+    <text x="100" y="269" font-size="14" fill="#64748b">加密、证书、完整性与时钟要求</text>
+    <text x="526" y="254" text-anchor="end" font-size="13" font-family="Menlo,Consolas,monospace" fill="#94a3b8">L5-7</text>
+
+    <rect x="70" y="296" width="480" height="64" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="70" y="296" width="7" height="64" rx="3.5" fill="#14b8a6"/>
+    <text x="100" y="324" font-size="21" font-weight="600" fill="#0f172a">传输层 · TCP / UDP</text>
+    <text x="100" y="347" font-size="14" fill="#64748b">连接、顺序、重传与端口</text>
+    <text x="526" y="332" text-anchor="end" font-size="13" font-family="Menlo,Consolas,monospace" fill="#94a3b8">L4</text>
+
+    <rect x="70" y="374" width="480" height="64" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="70" y="374" width="7" height="64" rx="3.5" fill="#0f766e"/>
+    <text x="100" y="402" font-size="21" font-weight="600" fill="#0f172a">网络层 · IPv4 / IPv6</text>
+    <text x="100" y="425" font-size="14" fill="#64748b">寻址、路由与分片</text>
+    <text x="526" y="410" text-anchor="end" font-size="13" font-family="Menlo,Consolas,monospace" fill="#94a3b8">L3</text>
+
+    <rect x="70" y="452" width="480" height="64" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <rect x="70" y="452" width="7" height="64" rx="3.5" fill="#0d9488"/>
+    <text x="100" y="480" font-size="21" font-weight="600" fill="#0f172a">链路 / 物理层 · Wi-Fi / UART</text>
+    <text x="100" y="503" font-size="14" fill="#64748b">帧边界、速率、电气特性</text>
+    <text x="526" y="488" text-anchor="end" font-size="13" font-family="Menlo,Consolas,monospace" fill="#94a3b8">L1-2</text>
+  </g>
+
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <rect x="650" y="140" width="480" height="376" rx="14" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="670" y="168" font-size="15" font-family="Menlo,Consolas,monospace" fill="#475569">Wi-Fi 帧</text>
+
+    <rect x="680" y="180" width="420" height="306" rx="12" fill="#e2e8f0" stroke="#cbd5e1"/>
+    <text x="700" y="208" font-size="15" font-family="Menlo,Consolas,monospace" fill="#475569">IP 头</text>
+
+    <rect x="710" y="220" width="360" height="236" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="730" y="248" font-size="15" font-family="Menlo,Consolas,monospace" fill="#475569">TCP 头</text>
+
+    <rect x="740" y="260" width="300" height="166" rx="12" fill="#e2e8f0" stroke="#cbd5e1"/>
+    <text x="760" y="288" font-size="15" font-family="Menlo,Consolas,monospace" fill="#475569">TLS 记录</text>
+
+    <rect x="770" y="300" width="240" height="96" rx="12" fill="#ccfbf1" stroke="#5eead4"/>
+    <text x="790" y="332" font-size="16" font-family="Menlo,Consolas,monospace" fill="#0f766e">MQTT 载荷</text>
+    <text x="790" y="360" font-size="14" fill="#0f766e">真正属于业务的数据</text>
+  </g>
+
+  <text x="650" y="552" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#64748b">发送：从内到外逐层加头；接收：从外到内逐层剥离。</text>
+  <text x="650" y="576" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#64748b">任何一层丢包或超时，最终都表现为上层“没有响应”。</text>
+
+  <text x="70" y="594" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#64748b">排查顺序：先看物理连接和供电，再看链路日志，最后才怀疑应用协议。</text>
+</svg>

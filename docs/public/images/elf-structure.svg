@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-label="链接后 ELF 文件结构示意图">
+  <rect width="1200" height="620" rx="18" fill="#f8fafc"/>
+  <rect x="1" y="1" width="1198" height="618" rx="18" fill="none" stroke="#e2e8f0"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrowGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <text x="56" y="56" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="28" font-weight="600" fill="#0f172a">链接之后，ELF 里有什么</text>
+  <text x="56" y="86" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="16" fill="#64748b">链接器合并同名段、解析符号并重定位，最终生成可烧录的镜像</text>
+
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <rect x="56" y="120" width="264" height="68" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="76" y="150" font-size="19" font-family="Menlo,Consolas,monospace" fill="#0f172a">main.c</text>
+    <text x="76" y="174" font-size="14" fill="#64748b">调用 clamp_int、printf</text>
+
+    <rect x="56" y="206" width="264" height="68" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="76" y="236" font-size="19" font-family="Menlo,Consolas,monospace" fill="#0f172a">math_utils.c</text>
+    <text x="76" y="260" font-size="14" fill="#64748b">定义 clamp_int</text>
+
+    <rect x="56" y="292" width="264" height="68" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="76" y="322" font-size="19" font-family="Menlo,Consolas,monospace" fill="#0f172a">startup_stm32.s</text>
+    <text x="76" y="346" font-size="14" fill="#64748b">向量表与复位入口</text>
+
+    <rect x="56" y="378" width="264" height="68" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="76" y="408" font-size="19" font-family="Menlo,Consolas,monospace" fill="#0f172a">libc.a</text>
+    <text x="76" y="432" font-size="14" fill="#64748b">printf、memcpy 等符号</text>
+  </g>
+
+  <path d="M320 154 H400" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <path d="M320 240 H400" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <path d="M320 326 H400" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <path d="M320 412 H400" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <path d="M400 154 V412" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M400 300 H446" stroke="#0f766e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <circle cx="500" cy="300" r="52" fill="#0f766e"/>
+  <text x="500" y="296" text-anchor="middle" font-family="Menlo,Consolas,monospace" font-size="26" fill="#ffffff">ld</text>
+  <text x="500" y="322" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="15" fill="#ccfbf1">链接</text>
+  <text x="500" y="386" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#64748b">合并段 · 解析符号 · 重定位</text>
+
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <rect x="620" y="118" width="480" height="38" rx="8" fill="#e2e8f0"/>
+    <text x="644" y="144" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">ELF Header</text>
+    <text x="1080" y="144" text-anchor="end" font-size="13" fill="#64748b">入口地址 · 段表偏移</text>
+
+    <rect x="620" y="166" width="480" height="44" rx="8" fill="#ccfbf1"/>
+    <text x="644" y="195" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">.isr_vector</text>
+    <text x="1080" y="195" text-anchor="end" font-size="13" fill="#0f766e">中断向量表</text>
+
+    <rect x="620" y="220" width="480" height="64" rx="8" fill="#ccfbf1"/>
+    <text x="644" y="250" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">.text</text>
+    <text x="644" y="272" font-size="14" fill="#475569">编译后的机器指令</text>
+    <text x="1080" y="258" text-anchor="end" font-size="13" fill="#64748b">代码</text>
+
+    <rect x="620" y="294" width="480" height="44" rx="8" fill="#f1f5f9"/>
+    <text x="644" y="323" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">.rodata</text>
+    <text x="1080" y="323" text-anchor="end" font-size="13" fill="#64748b">只读常量</text>
+
+    <rect x="620" y="348" width="480" height="56" rx="8" fill="#ffedd5" stroke="#fdba74"/>
+    <text x="644" y="377" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">.data</text>
+    <text x="644" y="394" font-size="13" fill="#9a3412">已初始化全局变量的初值</text>
+    <text x="1080" y="381" text-anchor="end" font-size="13" fill="#9a3412">启动时复制</text>
+
+    <rect x="620" y="414" width="480" height="44" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-dasharray="6 5"/>
+    <text x="644" y="443" font-size="18" font-family="Menlo,Consolas,monospace" fill="#0f172a">.bss (NOBITS)</text>
+    <text x="1080" y="443" text-anchor="end" font-size="13" fill="#64748b">不占文件空间</text>
+
+    <rect x="620" y="468" width="480" height="40" rx="8" fill="#e2e8f0"/>
+    <text x="644" y="495" font-size="17" font-family="Menlo,Consolas,monospace" fill="#0f172a">Section Header Table</text>
+
+    <rect x="620" y="518" width="480" height="40" rx="8" fill="#e2e8f0"/>
+    <text x="644" y="545" font-size="17" font-family="Menlo,Consolas,monospace" fill="#0f172a">.symtab / .strtab</text>
+    <text x="1080" y="545" text-anchor="end" font-size="13" fill="#64748b">可 strip</text>
+  </g>
+
+  <text x="56" y="596" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#64748b">提示：烧录工具通常只取可加载段；调试信息可以用 strip 去掉，减小镜像体积。</text>
+</svg>

@@ -31,6 +31,10 @@ SRAM : 0x2000_0000  ── .data、.bss、栈、堆
 
 启动时会做两件事：把 `.data` 的初值从 Flash 复制到 SRAM，把 `.bss` 清零。这也是为什么全局变量不能假设上电后是某个随机值。
 
+![Flash 与 SRAM 的内存布局：向量表、代码、只读数据、.data 初值、.bss、堆和栈](/images/memory-layout.svg)
+
+*图：`.data` 的初值存放在 Flash，启动时复制到 SRAM；堆向上增长，栈向下增长。*
+
 ## 一个内存预算
 
 假设 MCU 有 512 KB Flash、128 KB SRAM：

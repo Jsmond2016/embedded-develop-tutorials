@@ -21,6 +21,10 @@ flowchart TD
 
 每个阶段都有自己的日志、配置和失败模式。
 
+![嵌入式 Linux 启动链：BootROM、SPL、U-Boot、Kernel、Rootfs、systemd 与应用服务](/images/linux-boot-flow.svg)
+
+*图：串口日志停在哪一阶段，问题通常就在上一阶段的交接处。*
+
 ## BootROM
 
 SoC 内部固化代码，根据启动模式从 eMMC、SD、NAND、USB 或网络加载下一阶段。它通常不可修改，只做最小初始化。
