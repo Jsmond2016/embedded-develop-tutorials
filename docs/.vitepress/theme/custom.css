@@ -53,3 +53,11 @@
   margin-top: 0.3rem;
   accent-color: var(--vp-c-brand-1);
 }
+
+.vp-doc img {
+  cursor: zoom-in;
+}
+
+.vp-doc a img {
+  cursor: pointer;
+}

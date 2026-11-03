@@ -14,6 +14,7 @@
 - Vue 3
 - pnpm 10
 - Mermaid 架构图/时序图
+- Viewer.js 图片灯箱（点击放大、缩放、旋转、翻转）
 - 阿里云/淘宝 npm 镜像：`https://registry.npmmirror.com`
 
 ## 本地运行
