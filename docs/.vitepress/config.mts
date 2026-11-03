@@ -20,6 +20,11 @@ export default withMermaid(
       lineNumbers: true,
       theme: { light: 'github-light', dark: 'github-dark' }
     },
+    vite: {
+      optimizeDeps: {
+        include: ['mermaid', 'dayjs']
+      }
+    },
     themeConfig: {
       nav: [
         { text: '学习路线', link: '/guide/roadmap' },
@@ -216,4 +221,3 @@ export default withMermaid(
     }
   })
 )
-
