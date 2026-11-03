@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: 从像素到引脚
+  name: 从 Web 到硬件
   text: 前端工程师的嵌入式转型实战
   tagline: 不从头学编程，而是把 7 年 Web 工程能力迁移到资源受限、强实时、软硬结合的系统里。
   actions:

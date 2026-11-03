@@ -5,7 +5,7 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 export default withMermaid(
   defineConfig({
     lang: 'zh-CN',
-    title: '从像素到引脚',
+    title: '从 Web 到硬件',
     description: '面向前端工程师的嵌入式开发转型实战教程',
     cleanUrls: true,
     lastUpdated: true,
@@ -14,7 +14,7 @@ export default withMermaid(
       ['meta', { name: 'theme-color', content: '#0f766e' }],
       ['meta', { name: 'author', content: 'Embedded Leap' }],
       ['meta', { property: 'og:type', content: 'website' }],
-      ['meta', { property: 'og:title', content: '从像素到引脚' }],
+      ['meta', { property: 'og:title', content: '从 Web 到硬件' }],
       ['meta', { property: 'og:description', content: '前端工程师的嵌入式转型实战教程' }]
     ],
     markdown: {
@@ -266,7 +266,7 @@ export default withMermaid(
       lastUpdated: { text: '最后更新于', formatOptions: { dateStyle: 'short', timeStyle: 'short' } },
       footer: {
         message: '基于 VitePress 构建 · 面向前端工程师的嵌入式转型课程',
-        copyright: 'Copyright © 2026 Pixels to Pins'
+        copyright: 'Copyright © 2026 Embedded Leap'
       }
     },
     mermaid: {
